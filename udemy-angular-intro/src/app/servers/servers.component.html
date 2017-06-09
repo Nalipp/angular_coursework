@@ -1,0 +1,39 @@
+<!-- <label>Server name</label> -->
+<!-- <1!-- <input type="text" --1> --> 
+<!-- <1!--        class="form-control" --1> --> 
+<!-- <1!--        (input)="onUpdateServerName($event)"> --1> -->
+
+<!-- <input type="text" -->
+<!--        class="form-control" -->
+<!--        [(ngModel)]="serverName"> -->
+
+
+<!-- <button --> 
+<!--   class="btn btn-primary" --> 
+<!--   [disabled]="!allowNewServer" -->
+<!--   (click)="onCreateServer()" -->
+<!--   >Add Server</button> -->
+<!-- <1!-- <p [innerText]="allowNewServer"></p> --1> -->
+<!-- <1!-- <p>{{ serverName }}</p> --1> -->
+<!-- <1!-- <p>{{ serverCreationStatus }}</p> --1> -->
+<!-- <p *ngIf="serverCreated">Server was created. Server Name : {{ serverName }}</p> -->
+<!-- <app-server></app-server> -->
+<!-- <app-server></app-server> -->
+
+
+<h1 [ngClass]="{'border-blue': bool}">Create a server</h1>
+<!-- <h1 [ngClass]="{border-blue: bool}">Create a server</h1> -->
+<input type="text"
+       [(ngModel)]="serverName">
+
+<button (click)="createServer()">add server</button>
+
+<p *ngIf="serverCreated; else noServer">Server name is : {{ serverName }}</p>
+<ng-template #noServer>
+  <p>No current servers</p>
+</ng-template>
+
+<div *ngFor="let a of servers; let i = index">index : {{ i + 1 }}</div>
+
+<!-- <app-server *ngFor="let server of servers"></app-server> -->
+<!-- <app-server></app-server> -->

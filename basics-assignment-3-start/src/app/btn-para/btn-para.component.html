@@ -1,0 +1,23 @@
+<div class="container">
+  <button class="btn btn-primary"
+          (click)="toggleVisability()">
+          display details
+  </button>
+  <p *ngIf="totalClicks < 5; else specialClass">total clicks : {{ totalClicks }}</p>
+  <ng-template #specialClass>
+    <p class="special">total clicks : {{ totalClicks }}</p>
+  </ng-template>
+
+  <p *ngIf="paragraphVisable">secret password = 'tuna'</p>
+
+  <div *ngFor="let click of clicks"
+       [ngStyle]="{'background-color': click > 5 ? 'dodgerblue' : 'white'}"
+       [ngClass]="{'fontColor': click > 5 }">
+    {{ click }}
+  </div>
+
+
+</div>
+
+
+
