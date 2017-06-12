@@ -1,0 +1,20 @@
+<div class="form-container">
+  <h3>Input currency pair prices</h3>
+  <form>
+    <label for="currency-pair-name">Currency pair name</label>
+      <input 
+        type="text"
+        id="currency-pair-name"
+        name="currency-pair-name"
+        [(ngModel)]="currencyPairName">
+    <label for="currency-pair-price">Currency pair last price</label>
+      <input 
+        type="text"
+        id="currency-pair-price"
+        name="currency-pair-price"
+        [(ngModel)]="currencyPairPrice">
+
+    <button (click)="onDataAdd(); currencyPairName = null; currencyPairPrice = null">submit</button>
+  </form>
+</div>
+

@@ -1,0 +1,7 @@
+<app-btc-eth (pairDataCreated)="onPairDataAdded($event)" ></app-btc-eth>
+
+<div class="pair-container">
+  <ul *ngFor="let pair of allPairs">
+    <li>{{ pair.name }} ({{ pair. price }})</li>
+  </ul>
+</div>
