@@ -14,11 +14,11 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
   declarations: [
     AppComponent,
     HeaderComponent,
-    ShoppingListComponent,
     RecipesComponent,
     RecipeListComponent,
     RecipeDetailComponent,
     RecipeItemComponent,
+    ShoppingListComponent,
     ShoppingEditComponent,
   ],
   imports: [
