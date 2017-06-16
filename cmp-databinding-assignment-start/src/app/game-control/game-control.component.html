@@ -1,6 +1,16 @@
 <h2>Game Controller</h2>
-<button class="btn btn-success">start</button>
-<button class="btn btn-danger">stop</button>
+
+<button 
+  class="btn btn-success"
+  (click)="startGame()">
+  start game
+</button>
+
+<button 
+  class="btn btn-danger"
+  (click)="stopGame()">
+  stop game
+</button>
 
 <app-odd></app-odd>
 <app-even></app-even>
